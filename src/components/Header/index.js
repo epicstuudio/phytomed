@@ -24,7 +24,7 @@ const Index = () => {
           >
             <div className="nav-header">
               <a className="nav-brand" href="/">
-                <img src={logo} alt="logo" className="logo" width="300" />
+                <img src={logo} alt="logo" className="logo" width="240" />
               </a>
               <div
                 className="nav-toggle"

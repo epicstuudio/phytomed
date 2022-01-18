@@ -1,0 +1,12 @@
+.achievement-wrap {
+  position: relative;
+  text-align: center;
+  display: block;
+  padding: 2rem 0 0;
+}
+.achievement-content h4 {
+  margin-bottom: 5px;
+  line-height: 1;
+  font-size: 28px;
+  color: #08184b;
+}

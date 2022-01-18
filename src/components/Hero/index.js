@@ -12,10 +12,41 @@ const Index = () => {
   const [division, setDivision] = useState([]);
   const [chemical, setChemical] = useState([]);
   const [uses, setUses] = useState([]);
-  const [selected, setSelected] = useState('');
 
   const handleChange = (e) => {
     console.log(e);
+  };
+
+  const customStyles = {
+    control: (styles) => ({
+      ...styles,
+      backgroundColor: '#edf1fb',
+      border: '1px solid #ced4da',
+      height: '56px',
+      width: '218px',
+    }),
+    placeholder: (styles) => ({
+      ...styles,
+      marginLeft: '8px',
+    }),
+    menuList: (styles) => ({
+      ...styles,
+      width: '100%',
+    }),
+    option: (styles, { isFocused, isSelected }) => ({
+      ...styles,
+      background: isFocused ? '#f5f5f5' : isSelected ? '#fff' : undefined,
+      zIndex: 1,
+    }),
+    singleValue: (styles) => ({
+      ...styles,
+      marginLeft: '8px',
+    }),
+    menu: (base) => ({
+      ...base,
+      zIndex: 100,
+    }),
+    input: (styles) => ({ ...styles, marginLeft: '8px' }),
   };
 
   useEffect(() => {
@@ -87,7 +118,7 @@ const Index = () => {
                   <Select
                     options={kingdom}
                     classNamePrefix="select"
-                    className="form-control"
+                    styles={customStyles}
                     onChange={handleChange}
                   />
                 </div>
@@ -98,7 +129,7 @@ const Index = () => {
                   <Select
                     options={division}
                     classNamePrefix="select"
-                    className="form-control"
+                    styles={customStyles}
                     onChange={handleChange}
                   />
                 </div>
@@ -112,7 +143,7 @@ const Index = () => {
                   <Select
                     options={chemical}
                     classNamePrefix="select"
-                    className="form-control"
+                    styles={customStyles}
                     onChange={handleChange}
                   />
                 </div>
@@ -123,7 +154,7 @@ const Index = () => {
                   <Select
                     options={uses}
                     classNamePrefix="select"
-                    className="form-control"
+                    styles={customStyles}
                     onChange={handleChange}
                   />
                 </div>
