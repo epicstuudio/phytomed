@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slide from '../Slide';
 import { GET_RECENT_PLANTS } from '../../constants/config';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [recent, setRecent] = useState([]);
@@ -44,12 +45,9 @@ const Index = () => {
 
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 text-center">
-            <a
-              href="listings-list-with-sidebar.html"
-              className="btn btn-theme-light-2 rounded"
-            >
-              Browse More Properties
-            </a>
+            <Link to="/plantae" className="btn btn-theme-light-2 rounded">
+              Browse More Plants
+            </Link>
           </div>
         </div>
       </div>

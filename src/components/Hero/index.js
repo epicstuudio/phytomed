@@ -6,15 +6,17 @@ import { GET_SEARCH_FILTER } from '../../constants/config';
 import axios from 'axios';
 import Select from 'react-select';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Index = () => {
+  const history = useHistory();
   const [kingdom, setKingdom] = useState([]);
   const [division, setDivision] = useState([]);
   const [chemical, setChemical] = useState([]);
   const [uses, setUses] = useState([]);
 
   const handleChange = (e) => {
-    console.log(e);
+    history.push(`/${e.value}/${e.label}`);
   };
 
   const customStyles = {

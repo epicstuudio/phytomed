@@ -19,7 +19,7 @@ const Index = () => {
           <nav
             id="navigation"
             className={`navigation ${
-              size.width < 990 ? 'navigation-portrait' : 'navigation-landscape'
+              size.width < 1205 ? 'navigation-portrait' : 'navigation-landscape'
             }`}
           >
             <div className="nav-header">
@@ -53,8 +53,8 @@ const Index = () => {
                   </NavLink>
                 </li>
 
-                <li className={splitLocation[1] === 'plant' ? 'active' : ''}>
-                  <NavLink exact to="/plant">
+                <li className={splitLocation[1] === 'plantae' ? 'active' : ''}>
+                  <NavLink exact to="/plantae">
                     Plantae<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
@@ -84,11 +84,15 @@ const Index = () => {
                     Diseases Library<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
-                <li className={splitLocation[1] === 'about-us' ? 'active' : ''}>
-                  <NavLink exact to="/about-us">
-                    About us<span className="submenu-indicator"></span>
-                  </NavLink>
-                </li>
+                {size.width > 1401 && (
+                  <li
+                    className={splitLocation[1] === 'about-us' ? 'active' : ''}
+                  >
+                    <NavLink exact to="/about-us">
+                      About us<span className="submenu-indicator"></span>
+                    </NavLink>
+                  </li>
+                )}
               </ul>
 
               <ul className="nav-menu nav-menu-social align-to-right">

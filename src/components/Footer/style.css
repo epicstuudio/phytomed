@@ -1,0 +1,113 @@
+footer {
+  z-index: 99;
+  position: relative;
+}
+footer.dark-footer {
+  background: #ffffff;
+}
+footer.skin-dark-footer h4 {
+  color: #ffffff;
+}
+footer.skin-dark-footer .footer-widget ul li a,
+footer.skin-dark-footer,
+footer.skin-dark-footer a {
+  color: #858b9f;
+  transition: all ease 0.4s;
+  font-size: 14px;
+}
+footer.skin-dark-footer .footer-widget ul li a:hover,
+footer.skin-dark-footer .footer-widget ul li a:focus {
+  color: #ffffff;
+}
+.skin-dark-footer .footer-bottom {
+  background: #ffffff;
+  border-top: none;
+}
+footer.skin-dark-footer ul.footer-bottom-social li a {
+  color: #858b9f;
+  font-size: 14px;
+}
+footer.skin-dark-footer ul.footer-bottom-social li a:hover,
+footer.skin-dark-footer ul.footer-bottom-social li a:focus {
+  color: #ffffff;
+  opacity: 1;
+}
+.skin-dark-footer .f-newsletter .form-control {
+  border: 2px solid #9ea6ba;
+}
+.skin-dark-footer .form-control::-webkit-input-placeholder {
+  color: #9ea6ba;
+}
+.skin-dark-footer .form-control:-ms-input-placeholder {
+  color: #9ea6ba;
+}
+.skin-dark-footer .form-control::placeholder {
+  color: #9ea6ba;
+}
+footer.skin-dark-footer h4 {
+  color: #ffffff;
+}
+footer.skin-dark-footer .footer-widget ul li a,
+footer.skin-dark-footer,
+footer.skin-dark-footer a {
+  color: #858b9f;
+  transition: all ease 0.4s;
+  font-size: 14px;
+}
+footer.skin-dark-footer .footer-widget ul li a:hover,
+footer.skin-dark-footer .footer-widget ul li a:focus {
+  color: #ffffff;
+}
+.footer-widget {
+  padding: 70px 0;
+}
+.footer-widget ul {
+  padding: 0;
+  margin: 0;
+}
+.footer-widget ul li {
+  list-style: none;
+  margin-top: 15px;
+  display: block;
+}
+.footer-widget ul li a {
+  color: #626a70;
+}
+ul.footer-bottom-social {
+  margin: 0;
+  padding: 0;
+}
+ul.footer-bottom-social li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 17px;
+  margin-top: 0;
+}
+ul.footer-bottom-social li a {
+  color: #546e7a;
+}
+ul.footer-bottom-social li a:hover,
+ul.footer-bottom-social li a:focus {
+  color: #007bff;
+}
+ul.footer-bottom-social li i {
+  margin-right: 5px;
+}
+footer.skin-dark-footer ul.footer-bottom-social li a {
+  color: #858b9f;
+  font-size: 14px;
+}
+footer.skin-dark-footer ul.footer-bottom-social li a:hover,
+footer.skin-dark-footer ul.footer-bottom-social li a:focus {
+  color: #ffffff;
+  opacity: 1;
+}
+h4.widget-title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 17px;
+}
+img.img-footer {
+  max-width: 180px;
+  margin-bottom: 2rem;
+}

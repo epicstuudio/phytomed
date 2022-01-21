@@ -236,7 +236,7 @@ nav a:hover {
 .nav-menu > .active > a,
 .nav-menu > .focus > a,
 .nav-menu > li:hover > a {
-  color: #0fca98 !important;
+  color: #1a6b78 !important;
 }
 
 .nav-menu > li > a > [class*='ion-'],
@@ -930,14 +930,14 @@ nav a {
   border-radius: 4px;
   top: 15px;
   position: relative;
-  background: #08184b;
+  background: #005b69;
   height: 50px;
 }
 .nav-menu.nav-menu-social > li.add-listing.green {
   border-radius: 4px;
   top: 15px;
   position: relative;
-  background: #0fca98;
+  background: #1a6b78;
   height: 50px;
 }
 .nav-menu.nav-menu-social > li.add-listing.purple {

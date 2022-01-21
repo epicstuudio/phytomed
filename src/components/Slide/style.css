@@ -580,12 +580,14 @@ span.tag_t {
 }
 
 .listing-card-info-price {
-  font-weight: 600;
+  font-weight: 500 !important;
   position: relative;
   font-size: 22px;
-  color: #08184b;
+  color: #005b69 !important;
   line-height: 1.4;
-  padding-left: 0.35em;
+  padding: 0 0.35em;
+  border: 1px solid #005b69;
+  border-radius: 4px;
 }
 .price-prefix:before {
   content: '$';
@@ -762,9 +764,9 @@ span.tag_t {
   float: left;
 }
 .footer-flex .prt-view {
-  padding: 4px 18px;
+  padding: 4px 6px 4px 16px;
   color: #ffffff !important;
-  background: #0fca98;
+  background: #005b69;
   border-radius: 50px;
   height: 30px;
   display: inline-flex;
@@ -798,4 +800,20 @@ span.tag_t {
 }
 .property-listing.property-2 .listing-name .prt-link-detail {
   position: relative;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.w-8 {
+  width: 2rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+.npl {
+  padding-right: 0.5rem;
+}
+.svg {
+  transform: rotate(180deg);
 }

@@ -42,12 +42,12 @@
   font-size: 40px;
 }
 .btn.search-btn {
-  background: #69b769;
+  background: #005b69;
   font-family: 'Muli', sans-serif;
   padding: 17px;
   border-radius: 5px;
   box-shadow: 0 5px 24px rgba(31, 37, 59, 0.15);
-  color: #ffffff;
+  color: #ffffff !important;
   width: 100%;
   font-size: 1.2rem;
 }
