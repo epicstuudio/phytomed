@@ -24,7 +24,7 @@ const Index = ({ slug }) => {
         });
     };
     getSinglePlant();
-  }, []);
+  }, [url]);
   return (
     <div className="sidebar_featured_property">
       {similar?.map((a, i) => (

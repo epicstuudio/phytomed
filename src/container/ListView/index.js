@@ -20,7 +20,6 @@ const Index = () => {
         dataType: 'json',
       })
         .then(({ data }) => {
-          console.log(data.results);
           setValue(data.results);
         })
         .catch((e) => {
@@ -28,7 +27,7 @@ const Index = () => {
         });
     };
     getPlants();
-  }, []);
+  }, [splitLocation]);
   return (
     <>
       {value.length === 0 ? (

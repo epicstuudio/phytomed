@@ -18,8 +18,13 @@ const Index = () => {
   }
   const [value, setValue] = useState({});
   const [page, setPage] = useState(1);
+  const [totalpage, setTotalPage] = useState(1);
   const handleClick = (e) => {
-    setPage(e);
+    if (totalpage >= e && e > 0) {
+      setPage(e);
+    } else {
+      setPage(1);
+    }
     setValue({});
     window.scrollTo(0, 0);
   };
@@ -32,6 +37,7 @@ const Index = () => {
         dataType: 'json',
       })
         .then(({ data }) => {
+          setTotalPage(data.totalPage);
           setValue(data);
         })
         .catch((e) => {
@@ -55,12 +61,13 @@ const Index = () => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-12 col-md-12">
-                  <h2 className="ipt-title">{splitLocation[1]}</h2>
+                  <h2 className="ipt-title">{routeval ? routeval : ''}</h2>
                   <span className="ipn-subtitle">
-                    We have the largest collections of plants their uses and
-                    chemical compositions. Feel Free to know details about the
-                    plants you found and let us know if you found any
-                    information wrong.
+                    We have the largest collections of{' '}
+                    {routeval ? routeval : ''} their uses and chemical
+                    compositions. Feel Free to know details about the{' '}
+                    {routeval ? routeval : ''} you found and let us know if you
+                    found any information wrong.
                   </span>
                 </div>
               </div>
