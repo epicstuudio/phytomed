@@ -1,5 +1,5 @@
 export const BACKEND = 'https://phytomed-nepal.herokuapp.com';
-const API_URL = `${BACKEND}/api/v1`;
+export const API_URL = `${BACKEND}/api/v1`;
 
 export const GET_SEARCH_FILTER = `${API_URL}/search/filters`;
 

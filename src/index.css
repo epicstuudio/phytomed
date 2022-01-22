@@ -2925,6 +2925,7 @@ a.btn-outline-success:focus {
   display: inline;
 }
 .page-item.active .page-link {
+  cursor: pointer;
   z-index: 2;
   color: #fff;
   background-color: #fd5332;

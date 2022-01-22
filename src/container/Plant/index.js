@@ -5,10 +5,17 @@ import axios from 'axios';
 import { GET_ALL_PLANTS } from '../../constants/config';
 import List from '../../components/List';
 import { GrLinkPrevious, GrLinkNext } from 'react-icons/gr';
+
 const Index = () => {
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split('/');
+  let routeval = '';
+  if (splitLocation[1] === 'plantae') {
+    routeval = 'plant';
+  } else {
+    routeval = splitLocation[1];
+  }
   const [value, setValue] = useState({});
   const [page, setPage] = useState(1);
   const handleClick = (e) => {
@@ -18,13 +25,13 @@ const Index = () => {
   };
   useEffect(() => {
     const getAllPlants = async () => {
+      setValue({});
       await axios({
-        url: `${GET_ALL_PLANTS}?type=Plantae&page=${page}`,
+        url: `${GET_ALL_PLANTS}?type=${routeval}&page=${page}`,
         method: 'GET',
         dataType: 'json',
       })
         .then(({ data }) => {
-          console.log(data);
           setValue(data);
         })
         .catch((e) => {
@@ -32,7 +39,7 @@ const Index = () => {
         });
     };
     getAllPlants();
-  }, [page]);
+  }, [page, routeval]);
   return (
     <>
       {Object.keys(value).length === 0 ? (
@@ -73,14 +80,14 @@ const Index = () => {
                     <div className="col-lg-12 col-md-12 col-sm-12">
                       <ul className="pagination p-center">
                         <li className="page-item">
-                          <a
+                          <span
                             className="page-link"
                             onClick={(e) => handleClick(page - 1)}
                             aria-label="Previous"
                           >
                             <GrLinkPrevious className="ti-arrow-left" />
                             <span className="sr-only">Previous</span>
-                          </a>
+                          </span>
                         </li>
 
                         {Array.from(Array(value.totalPage), (e, i) => {
@@ -91,25 +98,25 @@ const Index = () => {
                               }`}
                               key={i + 1}
                             >
-                              <a
+                              <span
                                 className="page-link"
                                 onClick={(e) => handleClick(i + 1)}
                               >
                                 {i + 1}
-                              </a>
+                              </span>
                             </li>
                           );
                         })}
 
                         <li className="page-item">
-                          <a
+                          <span
                             className="page-link"
                             onClick={(e) => handleClick(page + 1)}
                             aria-label="Next"
                           >
                             <GrLinkNext className="ti-arrow-right" />
                             <span className="sr-only">Next</span>
-                          </a>
+                          </span>
                         </li>
                       </ul>
                     </div>

@@ -22,7 +22,7 @@ const index = ({ data }) => {
             <div className="click">
               <Slider {...settings}>
                 <div>
-                  <a href="single-property-1.html">
+                  <Link to={`/plant/${data.slug}`}>
                     <img
                       src={
                         data.image === '' ? ImageError : BACKEND + data.image
@@ -31,7 +31,7 @@ const index = ({ data }) => {
                       alt="property"
                       width={50}
                     />
-                  </a>
+                  </Link>
                 </div>
               </Slider>
             </div>
@@ -45,9 +45,7 @@ const index = ({ data }) => {
                 {data.nepali_name ? data.nepali_name : data.english_name}
               </span>
               <h4 className="listing-name">
-                <a href="single-property-1.html" className="prt-link-detail">
-                  {data.binomial_name}
-                </a>
+                <Link to={`/plant/${data.slug}`}>{data.binomial_name}</Link>
               </h4>
             </div>
             <div className="listing-short-detail-flex">
@@ -78,21 +76,19 @@ const index = ({ data }) => {
             <div className="foot-location">PM0005W8</div>
           </div>
           <div className="footer-flex">
-            <Link to={`plant/${data.slug}`}>
-              <a href="#" className="prt-view">
-                View
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  className="npl w-8 h-8 svg cursor-pointer"
-                >
-                  <path
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
+            <Link to={`plant/${data.slug}`} className="prt-view">
+              View
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                className="npl w-8 h-8 svg cursor-pointer"
+              >
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                  clipRule="evenodd"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
             </Link>
           </div>
         </div>
