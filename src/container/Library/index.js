@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { API_URL } from '../../constants/config';
 import Chemical from '../../components/Chemical';
 import { GrLinkPrevious, GrLinkNext } from 'react-icons/gr';
+import Disease from '../../components/Disease';
 
 const Index = () => {
   const location = useLocation();
@@ -38,6 +39,7 @@ const Index = () => {
         dataType: 'json',
       })
         .then(({ data }) => {
+          console.log(data);
           setTotalPage(data.totalPage);
           setValue(data);
         })
@@ -80,7 +82,8 @@ const Index = () => {
               <div className="row">
                 {routeval === 'chemical' &&
                   value?.libraries?.map((a, i) => <Chemical a={a} key={i} />)}
-                {routeval === 'disease' && 'I am Disease'}
+                {routeval === 'disease' &&
+                  value?.diseases?.map((a, i) => <Disease a={a} key={i} />)}
               </div>
 
               <div className="row">

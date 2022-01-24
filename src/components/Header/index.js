@@ -5,6 +5,8 @@ import submit from '../../assets/images/submit.svg';
 import user from '../../assets/images/user-light.svg';
 import useWindowSize from '../../hooks/useWindowSize';
 import { NavLink, useLocation } from 'react-router-dom';
+import Signin from '../Signin';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const size = useWindowSize();
@@ -12,8 +14,10 @@ const Index = () => {
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split('/');
+  const [modal, setModal] = useState(false);
   return (
     <>
+      <Signin modalset={(modal) => setModal(modal)} modal={modal} />
       <div className="header header-light head-shadow">
         <div className="container">
           <nav
@@ -48,19 +52,23 @@ const Index = () => {
               )}
               <ul className="nav-menu">
                 <li className={splitLocation[1] === '' ? 'active' : ''}>
-                  <NavLink exact to="/">
+                  <NavLink exact to="/" onClick={(e) => setSidebar(false)}>
                     Home<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
 
                 <li className={splitLocation[1] === 'plantae' ? 'active' : ''}>
-                  <NavLink exact to="/plantae">
+                  <NavLink
+                    exact
+                    to="/plantae"
+                    onClick={(e) => setSidebar(false)}
+                  >
                     Plantae<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
 
                 <li className={splitLocation[1] === 'fungi' ? 'active' : ''}>
-                  <NavLink exact to="/fungi">
+                  <NavLink exact to="/fungi" onClick={(e) => setSidebar(false)}>
                     Fungi<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
@@ -70,7 +78,11 @@ const Index = () => {
                     splitLocation[1] === 'chemical-library' ? 'active' : ''
                   }
                 >
-                  <NavLink exact to="/chemical-library">
+                  <NavLink
+                    exact
+                    to="/chemical-library"
+                    onClick={(e) => setSidebar(false)}
+                  >
                     Chemical Library<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
@@ -80,10 +92,15 @@ const Index = () => {
                     splitLocation[1] === 'disease-library' ? 'active' : ''
                   }
                 >
-                  <NavLink exact to="/disease-library">
+                  <NavLink
+                    exact
+                    to="/disease-library"
+                    onClick={(e) => setSidebar(false)}
+                  >
                     Diseases Library<span className="submenu-indicator"></span>
                   </NavLink>
                 </li>
+
                 {size.width > 1401 && (
                   <li
                     className={splitLocation[1] === 'about-us' ? 'active' : ''}
@@ -103,16 +120,16 @@ const Index = () => {
                   </a>
                 </li>
                 <li className="add-listing">
-                  <a href="/">
+                  <Link to="#" onClick={(e) => setModal(true)}>
                     <img src={user} width="12" alt="" className="mr-2" />
                     Sign In
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             {sidebar && (
               <div
-                class="nav-overlay-panel"
+                className="nav-overlay-panel"
                 style={{
                   backgroundColor: 'rgba(0, 0, 0, 0.5)',
                   display: 'block',
