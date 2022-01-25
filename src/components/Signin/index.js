@@ -64,7 +64,7 @@ const index = (props) => {
                   <div className="form-group">
                     <button
                       type="submit"
-                      className="btn btn-md full-width btn-theme-light-2 rounded"
+                      className="btn btn-md full-width btn-default rounded mt-4"
                     >
                       Login
                     </button>

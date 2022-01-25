@@ -93,7 +93,7 @@ h6 {
   color: #2d3954;
   font-weight: 700;
   text-transform: capitalize;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 @media (min-width: 1200px) {
@@ -118,7 +118,7 @@ h6 {
 
 .fa,
 .fas {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 .prt-types.sale {
@@ -215,13 +215,6 @@ h6 {
   font-size: 15px;
   margin-bottom: 2px;
 }
-.property-listing.property-1 .listing-detail-btn .more-btn {
-  padding: 6px 12px;
-  color: #ffffff;
-  border: 1px solid #0fca98 !important;
-  background: #0fca98 !important;
-  border-radius: 2px;
-}
 
 .list-layout .listing-detail-btn .more-btn {
   border-radius: 50px !important;
@@ -233,10 +226,10 @@ h6 {
   font-weight: 600;
 }
 .listing-detail-btn .prt-view {
-  padding: 4px 6px 4px 16px;
+  padding: 4px 16px 4px 16px;
   color: #ffffff !important;
   background: #005b69;
-  border-radius: 50px;
+  border-radius: 4px;
   height: 30px;
   display: inline-flex;
   align-items: center;

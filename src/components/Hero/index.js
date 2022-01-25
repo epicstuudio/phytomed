@@ -38,7 +38,7 @@ const Index = () => {
     option: (styles, { isFocused, isSelected }) => ({
       ...styles,
       background: isFocused ? '#f5f5f5' : isSelected ? '#fff' : undefined,
-      zIndex: 1,
+      zIndex: 999999,
     }),
     singleValue: (styles) => ({
       ...styles,
@@ -120,8 +120,10 @@ const Index = () => {
                   <Select
                     options={kingdom}
                     classNamePrefix="select"
-                    styles={customStyles}
                     onChange={handleChange}
+                    // other props
+                    menuPortalTarget={document.body} 
+                    styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
                   />
                 </div>
               </div>
@@ -131,8 +133,10 @@ const Index = () => {
                   <Select
                     options={division}
                     classNamePrefix="select"
-                    styles={customStyles}
                     onChange={handleChange}
+                    // other props
+                    menuPortalTarget={document.body} 
+                    styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
                   />
                 </div>
               </div>
@@ -145,8 +149,10 @@ const Index = () => {
                   <Select
                     options={chemical}
                     classNamePrefix="select"
-                    styles={customStyles}
                     onChange={handleChange}
+                    // other props
+                    menuPortalTarget={document.body} 
+                    styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
                   />
                 </div>
               </div>
@@ -156,8 +162,10 @@ const Index = () => {
                   <Select
                     options={uses}
                     classNamePrefix="select"
-                    styles={customStyles}
                     onChange={handleChange}
+                    // other props
+                    menuPortalTarget={document.body} 
+                    styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
                   />
                 </div>
               </div>
